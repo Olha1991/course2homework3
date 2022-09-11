@@ -1,8 +1,7 @@
-public class Truck  extends Transport{
-    public  Truck (String modelName, int wheelsCount){
+public class Truck  extends Transport  {
+    public Truck(String modelName, int wheelsCount) {
         super(modelName, wheelsCount);
     }
-
 
     public void updateTyre() {
         System.out.println("Меняем покрышку");
@@ -14,5 +13,11 @@ public class Truck  extends Transport{
 
     public void checkTrailer() {
         System.out.println("Проверяем прицеп");
+    }
+    @Override
+    public void allTransportService(){
+        updateTyre();
+        checkEngine();
+        checkTrailer();
     }
 }
